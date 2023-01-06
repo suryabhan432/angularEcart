@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang2';
+
+  valid:boolean=false;
+
+  onClick(){
+    this.valid=true;
+  }
 }

@@ -1,0 +1,11 @@
+.container{
+    background-color: rgb(156, 190, 190);
+}
+
+.card img{
+    width: 100%;
+    height: 140px;
+}
+h1{
+    text-align: center;
+}

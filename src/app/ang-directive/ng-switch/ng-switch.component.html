@@ -1,0 +1,30 @@
+<!-- <div class="col-sm-4">
+    <select name="" id="" class="form-control" (change)="getProduct($event)">
+        <option value="mobile">mobile</option>
+        <option value="laptop">laptop</option>
+        <option value="tv">tv</option>
+        <option value="washing machine">washing machine</option>
+    </select>
+</div>
+<div class="col-md-12" [ngSwitch]="selectedProduct">
+    <h2 class="text-success" *ngSwitchCase="'mobile'">mobile</h2>
+    <h2 class="text-success" *ngSwitchCase="'laptop'">laptop</h2>
+    <h2 class="text-success" *ngSwitchCase="'tv'">tv</h2>
+    <h2 class="text-success" *ngSwitchCase="'washing machine'">washing machine</h2>
+</div> -->
+
+<h1 [ngStyle]="{
+    'text-align' : 'center',
+    'color':'red',
+    'text-decoration':'underline'
+}">{{title}}</h1>
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="color:red;">Red color</h1>
+    <h1 *ngSwitchCase="'green'" style="color:green;">green color</h1>
+    <h1 *ngSwitchCase="'blue'" style="color:blue;">blue color</h1>
+    <h1 *ngSwitchCase="'orange'" style="color:orange;">orange color</h1>
+    <h1 *ngSwitchCase="'skyblue'" style="color:skyblue;">skyblue color</h1>
+
+    <h1 *ngSwitchDefault >Unknown color</h1>
+</div>

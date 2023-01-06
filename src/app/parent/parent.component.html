@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>By Product</h1>
+    <ng-container *ngIf="check">
+        <div *ngIf="addProduct" class="alert alert-light border d-flex align-center">
+
+            <strong class="text-success">{{addProduct}}</strong> is added in cart successfully
+            <button class="btn btn-success " style="margin-left:auto" (click)="onCheckOut()">Checkout</button>
+        </div>
+    </ng-container>
+    <hr><br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/laptop1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop</h5>
+
+                            <button class="btn btn-primary" (click)="onSelectedProduct('Laptop')">Select This
+                                Product</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/washing.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Washin Machine</h5>
+
+                            <button class="btn btn-primary" (click)="onSelectedProduct('Washin Machine')">Select This
+                                Product</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style="width: 15rem;">
+                        <img src="../../assets/tv.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">T.V.</h5>
+
+                            <button class="btn btn-primary" (click)="onSelectedProduct('T.V.')">Select This
+                                Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <hr>
+        <br>
+
+        <!-- <app-child [placeholderText]="myText"></app-child> -->
+        <app-child class="w-100" [selectedProduct]="selProduct" [productSelected]="protSelected"
+            (addProduct)="onAddedProduct($event)"></app-child>
+    </div>
+</div>

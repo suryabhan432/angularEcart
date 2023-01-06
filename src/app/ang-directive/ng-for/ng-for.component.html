@@ -1,0 +1,53 @@
+<p>ng-for works!</p>
+
+<div class="col-sm-8 container">
+    <h1>push</h1>
+  <table class="table ">
+    <thead class="table-dark">
+        <tr>
+            <th>sr. no.</th>
+            <th>prodct image
+            <th>product name</th>
+            <th>product id</th>
+            <th>product price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mypro of products; index as i">
+            <td>{{i+1}}</td>
+            <td>prodct image</td>
+            <td>{{mypro.name}}</td>
+            <td>{{mypro.id}}</td>
+            <td>{{mypro.price}}</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <br><br><hr><hr>
+<h1> splice</h1>
+
+<input  type="text" #uname>
+<button class="btn btn-success" (click)="onCreateUser(uname)">Create User</button>&nbsp;
+<button class="btn btn-danger" (click)="onRemoveUser()">Remove User</button>
+<br><br>
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>User Name</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+        <tr *ngFor="let user of users;index as i">
+            <td>{{user.name}}</td>
+            <td><button class="btn btn-danger" style="color:black" (click)="onRemoveItem(i)">Remove Item</button></td>
+        </tr>
+
+</table>
+
+
+</div>
+
