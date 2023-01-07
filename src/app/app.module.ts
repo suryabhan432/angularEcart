@@ -21,6 +21,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { Card2Component } from './card2/card2.component';
 import { Card1Component } from './card1/card1.component';
+import { DesignUtilityService } from './appServices/design-utility.service';
 
 
 const appRoutes:Routes = [              //routing create karne ke liye  "RouterModule,Router" ko import karna padta hai aur import me 'RouterModule.forRoot(appRoute)' likhna padta hai . ||| aur app.component.html me '<router-outlet></router-outlet>' likhna padta hai.
@@ -68,7 +69,7 @@ const appRoutes:Routes = [              //routing create karne ke liye  "RouterM
     NgbModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DesignUtilityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
